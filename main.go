@@ -8,9 +8,12 @@ import (
 
 func main() {
 	println("MAIN FUNCTION ENTERED")
-	c := boring("boring")
+
+	ann := boring("ann")
+	jen := boring("jen")
 	for i := 0; i < 5; i++ {
-		fmt.Printf("You say: %q\n", <-c)
+		fmt.Printf("You say: %q\n", <-ann)
+		fmt.Printf("You say: %q\n", <-jen)
 	}
 	fmt.Println("You're boring; I'm leaving.")
 }
